@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script defer src="main.js"></script>			
+    <title>NBA Guessing Game</title>
+</head>
+<body>
+    <div class="game">
+        <div id="title">NBA Guessing Game</div>
+            <div class="rules">
+                <p>Guess the NBA Player Based on thier 2021 Stats and Where they Play!</p>
+                <p>Players are all from the NBA TOP 100 List, Below Are the Levels</p>
+                <p>Hit the Button When your Ready!</p>
+                <button class="start">Good Luck!</button>
+            </div>
+            <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}' class="one-time">
+                <div>Conference<h3>Imposible</h3></div>
+                <div>Points Per Game<h3>Hard</h3></div>
+                <div>Rebounds Per Game<h3>Less Hard</h3></div>
+                <div>Assist Per Game<h3>Should Be Close</h3></div>
+                <div>Position<h3>You Better Have It</h3></div>
+                <div>Division<h3>Wow Really?</h3></div>
+                <div>Team<h3>You are Dumb</h3></div>
+            </div>
+        </div>  
+        <form id="guess">
+            <input type="text" name="guess">
+            <button type="submit" id="submit">Guess</button> 
+        </form>
+    </div>
+</body>
+</html>
