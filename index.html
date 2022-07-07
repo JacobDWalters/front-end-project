@@ -5,35 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <script src="https://kit.fontawesome.com/7ceebfcb53.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script defer src="main.js"></script>			
     <title>NBA Guessing Game</title>
 </head>
 <body>
     <div class="game">
         <div id="title">NBA Guessing Game</div>
-            <div class="rules">
-                <p>Guess the NBA Player Based on thier 2021 Stats and Where they Play!</p>
-                <p>Players are all from the NBA TOP 100 List, Below Are the Levels</p>
-                <p>Hit the Button When your Ready!</p>
-                <button class="start">Good Luck!</button>
-            </div>
-            <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}' class="one-time">
-                <div>Conference<h3>Imposible</h3></div>
-                <div>Points Per Game<h3>Hard</h3></div>
-                <div>Rebounds Per Game<h3>Less Hard</h3></div>
-                <div>Assist Per Game<h3>Should Be Close</h3></div>
-                <div>Position<h3>You Better Have It</h3></div>
-                <div>Division<h3>Wow Really?</h3></div>
-                <div>Team<h3>You are Dumb</h3></div>
-            </div>
+        <div class="rules">
+            <p>Guess the NBA Player Based on thier 2021 Stats and Where they Play!</p>
+            <p>Players are all from the NBA TOP 100 List, Below Are the Levels</p>
+            <p>Hit the Button When your Ready!</p>
+            <button class="start">Good Luck!</button>
+        </div>
+        <div data-slick='{"slidesToShow": , "slidesToScroll": 1}' class="one-time">
+            <div class="hints">Conference<h3 id="conf">Imposible</h3></div>
+            <div class="hints">Points Per Game<h3 id="ppg">Hard</h3></div>
+            <div class="hints">Rebounds Per Game<h3 id="rpg">Less Hard</h3></div>
+            <div class="hints">Assist Per Game<h3 id="apg">Should Be Close</h3></div>
+            <div class="hints">Position<h3 id="position">You Better Have It</h3></div>
+            <div class="hints">Division<h3 id="division">Wow Really?</h3></div>
+            <div class="hints">Team<h3 id="team">You are Dumb</h3></div>
+        </div>
+        <div class="slide-controls">
+            <i class="fa-solid fa-circle-left prev fa-2xl fa-bounce" style="--fa-animation-duration: 3s; color: rgb(172, 21, 21);"></i>
+            <i class="fa-solid fa-circle-right next fa-2xl fa-bounce" style="--fa-animation-duration: 3s; color: rgb(17, 17, 151);"></i>   
         </div>  
         <form id="guess">
-            <input type="text" name="guess">
+            <input type="text" name="guess" id="text-box">
             <button type="submit" id="submit">Guess</button> 
         </form>
     </div>
+    <iframe id="highlights" defer src="https://www.youtube.com/embed/?v=Hu146YAYAgo"></iframe>
 </body>
 </html>
