@@ -36,10 +36,11 @@
             <i class="fa-solid fa-circle-right next fa-2xl fa-bounce" style="--fa-animation-duration: 3s; color: rgb(17, 17, 151);"></i>   
         </div>  
         <form id="guess">
-            <input type="text" name="guess" id="text-box">
+            <datalist class="options"></datalist>
+            <input type="text" name="guess" id="text-box" autoComplete="on" list="options">
             <button type="submit" id="submit">Guess</button> 
         </form>
     </div>
-    <iframe id="highlights" defer src="https://www.youtube.com/embed/?v=Hu146YAYAgo"></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SWYPm24qVd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>

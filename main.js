@@ -10,6 +10,8 @@ const $ft = $('#ft');
 const $position = $('#position');
 const $division = $('#division');
 const $team = $('#team'); 
+const $options = $('.options');
+
 //array of posible answers
 const playersArr = ['rj_barret', 'tj_warren', 'marcus_morris', 'derrick_rose', 'jae_crowder', 'kevin_huerter', 'Evan_Fournier', 'Jusuf_Nurkic', 'Jonas_Valanciunas', 'Larry_Nance Jr',
 'Tim_Hardaway Jr', 'Harrison_Barnes', 'Danny_Green', 'Richaun_Holmes', 'Jonathan_Isaac', 'Caris_LeVert', "D'Angelo_Russell", 'Andrew_Wiggins', 'Norman_Powell', 'Dejounte_Murray',
@@ -22,6 +24,12 @@ const playersArr = ['rj_barret', 'tj_warren', 'marcus_morris', 'derrick_rose', '
 'Donovan_Mitchell', 'Chris_Paul', 'Trae_Young', 'Kyrie_Irving', 'Bradley_Beal', 'Jimmy_Butler', 'Zion_Williamson', 'Paul_George', 'Jayson_Tatum', 'Damian_Lillard',
 'Anthony_Davis', 'Kawhi_Leonard', 'Joel_Embiid', 'James_Harden', 'Nikola_Jokic', 'Luka_Doncic', 'Stephen_Curry', 'Giannis_Antetokounmpo', 'LeBron_James', 'Kevin_Durant'];
 
+//add each player as an option for the guess
+for (var i =0; i < playersArr.length; i++) {
+    let option = document.createElement('option');
+    option.textContent = playersArr[i];
+    $options.append(option);
+}
 //placeholder to be set to the selected answer
 let answer = null
 //carosel that will be used to display the hints 
@@ -74,7 +82,7 @@ $('.start').click(() => {
             let result2 = data.data[0];
 
             //assign the needed values, some players had to sit out the year
-            if (data.data === []) {
+            if (data.data.length == 0) {
                 $ppg.text('Did Not Play in 2021');
                 $rpg.text('Did Not Play in 2021');
                 $apg.text('Did Not Play in 2021');
@@ -109,8 +117,15 @@ $guess.submit((event) => {
             }
         })
         .then((value) => {
-            
-        })
+                if (value == 'play') {
+                    document.location.reload(true);
+                } else {
+                    window.scrollTo({
+                        top: 1000,
+                        behavior: 'smooth'
+                    });
+                }
+            })
     } else {
         $input.val('');
         swal({
@@ -120,6 +135,5 @@ $guess.submit((event) => {
             button: "I'll Do Better",
           });
     }
-    // document.location.reload(true);
 });
 

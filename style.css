@@ -7,14 +7,12 @@ body {
 .game {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     justify-content: center;
     
 
 }
 
 #title {
-    border: 1px solid black;
     font-size: 36pt;
     font-weight: 900;
     font-family: 'Courier New', Courier, monospace;
@@ -26,7 +24,6 @@ body {
 }
 
 .rules {
-    border: 1px solid black;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-size: 24pt;
@@ -35,7 +32,6 @@ body {
 
 .one-time {
     display: flex;
-    border: 1px solid black;
     width: 80%;
     margin: 0px auto;
     padding-top: 40px;
@@ -45,7 +41,6 @@ body {
 }
 
 .slide-controls {
-    border: 1px solid black;
     display: flex;
     justify-content: space-around;
     padding-top: 40px;
@@ -53,7 +48,6 @@ body {
 }
 
 #guess {
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     padding-top: 50px;
@@ -63,21 +57,22 @@ body {
 }
 
 .hints {
-    border: 1px solid black;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 24pt;
-    background-image: url('/pics/congrats-pic.jpg');
+    background-image: url('/pics/court.jog.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     font-weight: 900;
-    color: white;
+    color: rgb(59, 57, 57);
+    text-decoration: underline;
 }
 
 h3 {
     font-size: 24pt;
     margin-top: 10px;
+    text-decoration: none;
 }
 
 .start {
@@ -119,16 +114,17 @@ h3 {
     text-align: center;
 }
 
-#highlights {
-    display: flex;
-    width: 60%;
-    height: 300px;
-    margin: 0px auto;
-    border: 0;
-    margin-top: 20px;
-}
-
 .swal-button {
     color: white;
     background-color: rgb(55, 76, 67);
+}
+
+iframe {
+    display: flex;
+    align-self: center;
+    margin: 0 auto;
+    justify-items: center;
+    margin-top: 200px;
+    border-width: 20px;
+    border-style: groove;
 }
